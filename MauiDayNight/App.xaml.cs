@@ -1,4 +1,6 @@
-﻿namespace MauiDayNight
+﻿using MauiDayNight.Core;
+
+namespace MauiDayNight
 {
     public partial class App : Application
     {
@@ -7,6 +9,10 @@
             InitializeComponent();
 
             MainPage = new AppShell();
+
+            //this.Resources.MergedDictionaries.Add(new MauiDayNightCore.Resources.Raw.TelerikPatch());
+            //_ = new TelerikPatch();
+            _ = new CoreObject();
         }
     }
 }

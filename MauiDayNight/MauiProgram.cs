@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Telerik.Maui.Controls.Compatibility;
+using MauiDayNight.Core;
 
 namespace MauiDayNight
 {
@@ -10,7 +11,7 @@ namespace MauiDayNight
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-                .UseTelerik()
+                .UseDayNightCore()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
