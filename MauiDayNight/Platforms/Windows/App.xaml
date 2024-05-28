@@ -2,7 +2,6 @@
     x:Class="MauiDayNight.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:daynightcore="MauiDayNightCore"
     xmlns:local="using:MauiDayNight.WinUI"
     xmlns:maui="using:Microsoft.Maui"
     xmlns:telerik="using:Telerik.Maui"
@@ -10,6 +9,11 @@
     xmlns:telerikPlatform="using:Telerik.Maui.Platform"
     xmlns:theming="using:Telerik.UI.Xaml.Controls">
     <maui:MauiWinUIApplication.Resources>
-        <ResourceDictionary Source="TelerikRadEntryPatches.xaml" />
+        <!--  Work  -->
+        <!--<ResourceDictionary Source="TelerikRadEntryPatches.xaml" />-->
+        <!--  Work  -->
+        <!--<ResourceDictionary Source="TelerikRadEntryPatches.xaml;assembly=MauiDayNight" />-->
+        <!--  Work  -->
+        <ResourceDictionary Source="ms-appx:///Platforms/Windows/TelerikRadEntryPatches.xaml;assembly=MauiDayNight" />
     </maui:MauiWinUIApplication.Resources>
 </maui:MauiWinUIApplication>
