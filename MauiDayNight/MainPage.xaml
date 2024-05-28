@@ -3,7 +3,6 @@
     x:Class="MauiDayNight.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:daynightcore="clr-namespace:MauiDayNight.Core;assembly=MauiDayNightCore"
     xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
     x:Name="mainPage">
     <ContentPage.Resources>
@@ -20,23 +19,13 @@
             <Button
                 Clicked="ToggleThemeButton_Clicked"
                 HorizontalOptions="Start"
-                Text="{Binding CurrentTheme, StringFormat='Current Theme: {0}'}" />
+                Text="{Binding AppThemeManager.CurrentTheme, StringFormat='Current Theme: {0}'}" />
             <Label Text="Type in some text" />
             <telerik:RadEntry x:Name="textEntry" />
             <Label Text="Type in some more text" />
             <telerik:RadEntry x:Name="moreTextEntry" />
             <Label Text="Type in even more text" />
             <telerik:RadEntry x:Name="evenMoreTextEntry" />
-            <Entry />
-            <Rectangle
-                Fill="Red"
-                HeightRequest="2"
-                WidthRequest="200" />
-            <daynightcore:CustomEntry />
-            <Rectangle
-                Fill="Red"
-                HeightRequest="2"
-                WidthRequest="200" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
