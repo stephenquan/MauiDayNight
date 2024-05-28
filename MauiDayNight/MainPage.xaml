@@ -3,13 +3,11 @@
     x:Class="MauiDayNight.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiDayNight"
     xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
     x:Name="mainPage">
     <ContentPage.Resources>
-        <Style TargetType="telerik:RadEntry">
-            <Setter Property="TextColor" Value="{AppThemeBinding Light=Blue, Dark=Yellow}" />
-            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=Yellow, Dark=Blue}" />
-        </Style>
+
     </ContentPage.Resources>
     <ScrollView>
         <VerticalStackLayout
@@ -21,11 +19,11 @@
                 HorizontalOptions="Start"
                 Text="{Binding AppThemeManager.CurrentTheme, StringFormat='Current Theme: {0}'}" />
             <Label Text="Type in some text" />
-            <telerik:RadEntry x:Name="textEntry" />
+            <local:InputBox x:Name="textEntry" />
             <Label Text="Type in some more text" />
-            <telerik:RadEntry x:Name="moreTextEntry" />
+            <local:InputBox x:Name="moreTextEntry" />
             <Label Text="Type in even more text" />
-            <telerik:RadEntry x:Name="evenMoreTextEntry" />
+            <local:InputBox x:Name="evenMoreTextEntry" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

@@ -6,8 +6,9 @@ public partial class MainPage : ContentPage
 
     public MainPage(AppThemeManager appThemeManager)
     {
-        this.AppThemeManager = appThemeManager;
+        AppThemeManager = appThemeManager;
         InitializeComponent();
+        OnPropertyChanged(nameof(AppThemeManager));
     }
 
     private void ToggleThemeButton_Clicked(object sender, EventArgs e)

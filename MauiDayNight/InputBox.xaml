@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="MauiDayNight.InputBox"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+    xmlns:telerikPlatform="clr-namespace:Telerik.Maui.Platform;assembly=Telerik.Maui.Core">
+    <ContentView.Resources>
+        <!--<Style
+            x:Key="MaskedEntryControlTextBoxStyle"
+            BasedOn="{StaticResource DefaultTextBoxStyle}"
+            TargetType="TextBox">
+        -->
+        <!--<Setter Property="Template"/>-->
+        <!--
+        </Style>-->
+        <ResourceDictionary>
+
+            <Style TargetType="telerik:RadEntry">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light=Blue, Dark=Yellow}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=Yellow, Dark=Blue}" />
+            </Style>
+            <Style TargetType="telerikPlatform:RadMauiEntry" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <!--<telerik:RadEntry.Style Key="{StaticResource customRadEntry}" />-->
+    <telerik:RadEntry>
+        <!--  ABC  -->
+    </telerik:RadEntry>
+
+</ContentView>
